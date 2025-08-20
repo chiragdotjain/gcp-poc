@@ -21,4 +21,4 @@ RUN ./mvnw package -DskipTests
 EXPOSE 8080
 
 # Run the JAR file
-ENTRYPOINT ["java", "-jar", "target/gcp-poc-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/my-spring-app-0.0.1-SNAPSHOT.jar"]
