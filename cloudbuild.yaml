@@ -31,3 +31,7 @@ steps:
 # List the images to be built and pushed
 images:
   - 'us-central1-docker.pkg.dev/${PROJECT_ID}/my-spring-app-repo/my-spring-app:latest'
+
+# Add this section to configure logging
+options:
+  logging: CLOUD_LOGGING_ONLY
