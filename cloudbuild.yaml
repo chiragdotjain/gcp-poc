@@ -4,14 +4,14 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/gcp-poc/my-spring-app:latest'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/my-spring-app-repo/my-spring-app:latest'
       - '.'
 
   # Push the tagged Docker image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/gcp-poc/my-spring-app:latest'
+      - 'us-central1-docker.pkg.dev/${PROJECT_ID}/my-spring-app-repo/my-spring-app:latest'
 
   # Deploy the image to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -19,7 +19,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'my-spring-service'  # You can change the service name if you wish
+      - 'my-spring-app'  # You can change the service name if you wish
       - '--image=us-central1-docker.pkg.dev/${PROJECT_ID}/my-spring-app-repo/my-spring-app:latest'
       - '--region=us-central1' # Match the region of your Artifact Registry repo
       - '--platform=managed'
