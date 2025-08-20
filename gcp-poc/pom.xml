@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>my-spring-app</name>
-    <description>Demo project for Spring Boot</description>
+    <description>POC project for a Spring Boot Java app on GCP</description>
 
     <!-- Spring Boot Parent POM -->
     <parent>
