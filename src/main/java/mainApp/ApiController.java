@@ -14,6 +14,6 @@ public class ApiController {
 
     @GetMapping("/")
     public String index() {
-        return "NEW Greetings from Spring Boot!";
+        return "NEW2 Greetings from Spring Boot!";
     }
 }
